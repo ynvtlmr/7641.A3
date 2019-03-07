@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d01ea630-0557-410a-a06f-9aea30f23799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data_visualization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/sample.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NN Experiments.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/NN Experiments.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ica.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ica.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rf.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/NN Experiments.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="0" />
+              <selected id="2" />
             </state>
           </provider>
         </entry>
@@ -771,7 +761,7 @@
     <entry file="file://$PROJECT_DIR$/src/NN Experiments.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="0" />
+          <selected id="2" />
         </state>
       </provider>
     </entry>
