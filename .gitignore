@@ -4,8 +4,6 @@ __pycache__/
 *$py.class
 
 # experiment files
-*.png
-*.pdf
 .DS_store
 
 # C extensions
@@ -29,7 +27,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-**/**/*.csv
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
