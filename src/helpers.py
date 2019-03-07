@@ -1,4 +1,5 @@
 import os
+import sys
 from collections import Counter
 import numpy as np
 import scipy.sparse as sps
@@ -55,7 +56,11 @@ def get_abspath(filename, filepath):
         fullpath (str): Absolute filepath.
 
     """
-    p = os.path.abspath(os.path.join(os.curdir, os.pardir))
+    is_colab = 'google.colab' in sys.modules
+    if is_colab:
+        p = '/content/gdrive/My Drive/COLAB/temp/'
+    else:
+        p = os.path.abspath(os.path.join(os.curdir, os.pardir))
     fullpath = os.path.join(p, filepath, filename)
 
     return fullpath

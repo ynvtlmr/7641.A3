@@ -107,7 +107,7 @@ def generate_plots(name):
     plotdir = 'plots/RP'
     plotpath = get_abspath('{}_metrics.png'.format(name), plotdir)
     plt.savefig(plotpath)
-    plt.clf()
+    plt.close()
 
 
 def run_clustering(digits_y, abalone_y, rdir, pdir, experiment=False):

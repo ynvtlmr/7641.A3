@@ -100,7 +100,7 @@ def generate_fi_plot(name, theta):
     plotdir = 'plots/RF'
     plotpath = get_abspath('{}_fi.png'.format(name), plotdir)
     plt.savefig(plotpath)
-    plt.clf()
+    plt.close()
 
 
 def run_clustering(digits_y, abalone_y, rdir, pdir, experiment=False):

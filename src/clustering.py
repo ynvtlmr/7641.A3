@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import timeit
-import seaborn as sns
 from helpers import cluster_acc, get_abspath, save_dataset, save_array
 from sklearn.metrics import silhouette_score
 from sklearn.manifold import TSNE
@@ -13,15 +12,17 @@ from sklearn.metrics.cluster import contingency_matrix
 from sklearn.metrics.cluster import homogeneity_score, completeness_score
 import matplotlib
 import argparse
-matplotlib.use('agg')
-
 import matplotlib.pyplot as plt
 import seaborn as sns
+import warnings
+
+matplotlib.use('agg')
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
 def get_one_hot(targets, nb_classes):
     res = np.eye(nb_classes)[np.array(targets).reshape(-1)]
-    return res.reshape(list(targets.shape)+[nb_classes])
+    return res.reshape(list(targets.shape) + [nb_classes])
 
 
 def clustering_experiment(X, y, name, clusters, rdir):
@@ -171,7 +172,7 @@ def generate_component_plots(name, rdir, pdir):
     # save figure
     plotpath = get_abspath('{}_components.png'.format(name), pdir)
     plt.savefig(plotpath)
-    plt.clf()
+    plt.close()
 
 
 def generate_validation_plots(name, rdir, pdir):
@@ -237,10 +238,10 @@ def generate_validation_plots(name, rdir, pdir):
     # save figure
     plotpath = get_abspath('{}_validation.png'.format(name), pdir)
     plt.savefig(plotpath)
-    plt.clf()
+    plt.close()
 
 
-def get_cluster_data(X, y, name, km_k, gmm_k, rdir, pdir, perplexity=30):
+def get_cluster_data(X, y, name, km_k, gmm_k, rdir, pdir, perplexity=200):
     """Generates 2D dataset that contains cluster labels for K-Means and GMM,
     as well as the class labels for the given dataset.
 
@@ -287,17 +288,17 @@ def generate_contingency_matrix(kmeans_contigency,
                                 gmm_continigency, name, pdir):
     fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(14, 3))
     ax1 = sns.heatmap(
-            kmeans_contigency,
-            linewidths=.5, cmap="YlGnBu",
-            ax=ax1)
+        kmeans_contigency,
+        linewidths=.5, cmap="YlGnBu",
+        ax=ax1)
     ax1.set_title('K-Means Clusters ({})'.format(name))
     ax1.set_xlabel('Cluster')
     ax1.set_ylabel('True label')
 
     ax2 = sns.heatmap(
-            gmm_continigency,
-            linewidths=.5, cmap="YlGnBu",
-            ax=ax2)
+        gmm_continigency,
+        linewidths=.5, cmap="YlGnBu",
+        ax=ax2)
     ax2.set_title('GMM Clusters ({})'.format(name))
     ax2.set_xlabel('Cluster')
     ax2.set_ylabel('True label')
@@ -314,7 +315,7 @@ def generate_contingency_matrix(kmeans_contigency,
     plotdir = pdir
     plotpath = get_abspath('{}_contingecy.png'.format(name), plotdir)
     plt.savefig(plotpath)
-    plt.clf()
+    plt.close()
 
 
 def generate_cluster_plots(df, name, pdir):
@@ -335,20 +336,20 @@ def generate_cluster_plots(df, name, pdir):
 
     # plot cluster scatter plots
     fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(14, 3))
-    ax1.scatter(x1, x2, marker='x', s=20, c=km, cmap='gist_rainbow')
+    ax1.scatter(x1, x2, marker='o', s=20, c=km, cmap='tabl10')  # cmap='gist_rainbow'
     ax1.set_title('K-Means Clusters ({})'.format(name))
     ax1.set_ylabel('x1')
     ax1.set_xlabel('x2')
     ax1.grid(color='grey', linestyle='dotted')
 
-    ax2.scatter(x1, x2, marker='x', s=20, c=gmm, cmap='gist_rainbow')
+    ax2.scatter(x1, x2, marker='o', s=20, c=gmm, cmap='tabl10')  # cmap='gist_rainbow'
     ax2.set_title('GMM Clusters ({})'.format(name))
     ax2.set_ylabel('x1')
     ax2.set_xlabel('x2')
     ax2.grid(color='grey', linestyle='dotted')
 
     # change color map depending on dataset
-    ax3.scatter(x1, x2, marker='o', s=20, c=c, cmap='hsv')
+    ax3.scatter(x1, x2, marker='o', s=20, c=c, cmap='gist_rainbow')  # cmap='hsv'
     ax3.set_title('Class Labels ({})'.format(name))
     ax3.set_ylabel('x1')
     ax3.set_xlabel('x2')
@@ -366,7 +367,7 @@ def generate_cluster_plots(df, name, pdir):
     plotdir = pdir
     plotpath = get_abspath('{}_clusters.png'.format(name), plotdir)
     plt.savefig(plotpath)
-    plt.clf()
+    plt.close()
 
 
 def nn_cluster_datasets(X, name, km_k, gmm_k):
@@ -402,6 +403,7 @@ def nn_cluster_datasets(X, name, km_k, gmm_k):
     save_array(array=km_x, filename=kmfile, subdir=resdir)
     save_array(array=gmm_x, filename=gmmfile, subdir=resdir)
 
+
 def main():
     """Run code to generate clustering results.
 
@@ -420,35 +422,33 @@ def main():
     pdir = 'plots/clustering'
 
     train_df = pd.read_csv('../data/optdigits_train.csv', header=None)
-    digits_y = train_df.iloc[:, -1:].as_matrix().flatten()
-    digits_X = train_df.iloc[:, :-1].as_matrix()
+    digits_y = train_df.iloc[:, -1:].values.flatten()
+    digits_X = train_df.iloc[:, :-1].values
 
     train_df = pd.read_csv('../data/abalone_train.csv', header=None)
-    abalone_y = train_df.iloc[:, -1:].as_matrix().flatten()
-    abalone_X = train_df.iloc[:, :-1].as_matrix()
+    abalone_y = train_df.iloc[:, -1:].values.flatten()
+    abalone_X = train_df.iloc[:, :-1].values
+
     # run clustering experiments
     clusters = range(2, 50)
     if args.generate:
-        clustering_experiment(
-            digits_X, digits_y, 'digits', clusters, rdir=rdir
-        )
-        clustering_experiment(
-            abalone_X, abalone_y, 'abalone', clusters, rdir=rdir
-        )
+        # run clustering experiment
+        clustering_experiment(digits_X, digits_y, 'digits', clusters, rdir=rdir)
+        clustering_experiment(abalone_X, abalone_y, 'abalone', clusters, rdir=rdir)
+
+        # generate component plots
         generate_component_plots(name='digits', rdir=rdir, pdir=pdir)
         generate_component_plots(name='abalone', rdir=rdir, pdir=pdir)
 
-        # # # generate validation plots (relative performance of clustering)
+        # generate validation plots (relative performance of clustering)
         generate_validation_plots(name='digits', rdir=rdir, pdir=pdir)
         generate_validation_plots(name='abalone', rdir=rdir, pdir=pdir)
     else:
         get_cluster_data(
-            digits_X, digits_y, 'digits',
-            km_k=10, gmm_k=8, rdir=rdir, pdir=pdir,
+            digits_X, digits_y, 'digits', km_k=10, gmm_k=10, rdir=rdir, pdir=pdir,
         )
         get_cluster_data(
-            abalone_X, abalone_y, 'abalone',
-            km_k=3, gmm_k=11, rdir=rdir, pdir=pdir,
+            abalone_X, abalone_y, 'abalone', km_k=3, gmm_k=3, rdir=rdir, pdir=pdir,
         )
 
         # generate 2D data for cluster visualization
@@ -456,12 +456,8 @@ def main():
         df_digits_2D = pd.read_csv(get_abspath('digits_2D.csv', rdir))
         generate_cluster_plots(df_digits_2D, name='digits', pdir=pdir)
 
-        df_abalone_2d = pd.read_csv(
-            get_abspath('abalone_2D.csv', rdir)
-        )
-        generate_cluster_plots(
-            df_abalone_2d, name='abalone', pdir=pdir
-        )
+        df_abalone_2d = pd.read_csv(get_abspath('abalone_2D.csv', rdir))
+        generate_cluster_plots(df_abalone_2d, name='abalone', pdir=pdir)
 
     # calculate and print running time
     end_time = timeit.default_timer()

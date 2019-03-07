@@ -110,7 +110,7 @@ def generate_kurtosis_plot(name):
     plotdir = 'plots/ICA'
     plotpath = get_abspath('{}_kurtosis.png'.format(name), plotdir)
     plt.savefig(plotpath)
-    plt.clf()
+    plt.close()
 
 
 def run_clustering(digits_y, abalone_y, rdir, pdir, experiment=False):

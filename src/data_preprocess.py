@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import os
 from helpers import save_dataset
 from sklearn.model_selection import train_test_split
 
@@ -21,8 +20,8 @@ def split_data(df, test_size=0.3, seed=42):
 
     """
     # convert data frame to Numpy array and split X and y
-    X_data = df.drop(columns='class').as_matrix()
-    y_data = df['class'].as_matrix()
+    X_data = df.drop(columns='class').values
+    y_data = df['class'].values
 
     # split into train and test sets, ensuring that composition of classes in
     # original dataset is maintained in the splits
@@ -46,26 +45,28 @@ if __name__ == '__main__':
     print('Processing \n')
     tdir = 'data'
 
-    df_abalone = pd.read_csv(
-        '../data/abalone.csv'
-    )
+    names = ['abalone', 'contraceptive']
+    for n in names:
+        df = pd.read_csv(
+            '../data/{}.csv'.format(n)
+        )
 
-    X_train, X_test, y_train, y_test = split_data(df_abalone)
+        X_train, X_test, y_train, y_test = split_data(df)
 
-    train_df = pd.DataFrame(
-        np.append(X_train, y_train.reshape(-1, 1), 1)
-    )
-    test_df = pd.DataFrame(
-        np.append(X_test, y_test.reshape(-1, 1), 1)
-    )
+        train_df = pd.DataFrame(
+            np.append(X_train, y_train.reshape(-1, 1), 1)
+        )
+        test_df = pd.DataFrame(
+            np.append(X_test, y_test.reshape(-1, 1), 1)
+        )
 
-    print('SHAPE OF test')
-    print(test_df.shape)
+        print('SHAPE OF test')
+        print(test_df.shape)
 
-    print('SHAPE OF Train')
-    print(train_df.shape)
+        print('SHAPE OF Train')
+        print(train_df.shape)
 
-    save_dataset(train_df, 'abalone_train.csv', sep=',',
-                 subdir=tdir, header=False)
-    save_dataset(test_df, 'abalone_test.csv', sep=',',
-                 subdir=tdir, header=False)
+        save_dataset(train_df, '{}_train.csv'.format(n), sep=',',
+                     subdir=tdir, header=False)
+        save_dataset(test_df, '{}_test.csv'.format(n), sep=',',
+                     subdir=tdir, header=False)

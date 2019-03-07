@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d01ea630-0557-410a-a06f-9aea30f23799" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/NN_Experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NN_Experiments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/clustering/sample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NN Experiments.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/NN Experiments.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/clustering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ica.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ica.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pca.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rf.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp.py" afterDir="false" />
@@ -16,6 +22,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/cs_7641_A3$NN_Experiments.coverage" NAME="NN_Experiments Coverage Results" MODIFIED="1551820892537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/cs_7641_A3$data_visualization.coverage" NAME="data_visualization Coverage Results" MODIFIED="1551908389559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/cs_7641_A3$data_preprocess.coverage" NAME="data_preprocess Coverage Results" MODIFIED="1551855562052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1390195086">
@@ -29,26 +37,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="12" />
-          <entry key="sh" value="1" />
-          <entry key="txt" value="1" />
+          <entry key="csv" value="19" />
+          <entry key="ipynb" value="1" />
+          <entry key="png" value="23" />
+          <entry key="py" value="24" />
+          <entry key="sh" value="2" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="12" />
+          <entry key="Bash" value="2" />
+          <entry key="IPNB" value="1" />
+          <entry key="Image" value="23" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="19" />
+          <entry key="py" value="1039" />
+          <entry key="txt" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="19" />
+          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="Python" value="1039" />
         </counts>
       </usages-collector>
     </session>
@@ -56,22 +71,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NN_Experiments.py">
+        <entry file="file://$PROJECT_DIR$/src/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="297" column="8" lean-forward="true" selection-start-line="297" selection-start-column="5" selection-end-line="297" selection-end-column="11" />
-              <folding>
-                <element signature="e#27#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/cluster/k_means_.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="911" column="10" lean-forward="true" selection-start-line="911" selection-start-column="10" selection-end-line="911" selection-end-column="10" />
+            <state relative-caret-position="45">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -79,16 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2707">
-              <caret line="265" column="30" selection-start-line="265" selection-start-column="30" selection-end-line="265" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data_preprocess.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-302">
+            <state relative-caret-position="314">
+              <caret line="455" column="46" selection-start-line="455" selection-start-column="42" selection-end-line="455" selection-end-column="46" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -99,7 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helpers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1612">
+            <state relative-caret-position="192">
+              <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-end-line="59" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -107,22 +103,81 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/NN Experiments.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/manifold/t_sne.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="479" column="47" lean-forward="true" selection-start-line="479" selection-start-column="20" selection-end-line="479" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data_preprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>random</find>
-      <find>Independent Component Analysis</find>
-      <find>RandomForestClassifier</find>
-      <find>print</find>
-      <find>==</find>
-      <find>PCA</find>
-      <find>means</find>
-      <find>KMeans</find>
-      <find>eucl</find>
+      <find>digits</find>
+      <find>.as_matrix()</find>
+      <find>suffix</find>
+      <find>,</find>
+      <find>1.13</find>
+      <find>0.515</find>
+      <find>,.*,.*,0.515</find>
+      <find>,.*,.*,0.515,</find>
+      <find>515</find>
+      <find>plt.s</find>
+      <find>abalone</find>
+      <find>contrace</find>
+      <find>,1$</find>
+      <find>,2$</find>
+      <find>args.generate</find>
+      <find>get_cluster_data</find>
+      <find>3.0$</find>
+      <find>class</find>
+      <find>'o'</find>
+      <find>iter</find>
+      <find>TSNE</find>
+      <find>perplexity</find>
+      <find>cmap=</find>
+      <find>as_matrix()</find>
+      <find>rdir</find>
+      <find>.clf()</find>
+      <find>plt.clf()</find>
+      <find>_2d</find>
+      <find>contraceptive</find>
+      <find>path</find>
     </findStrings>
+    <replaceStrings>
+      <replace>plt.close()</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -134,9 +189,15 @@
         <option value="$PROJECT_DIR$/src/rp.py" />
         <option value="$PROJECT_DIR$/src/pca.py" />
         <option value="$PROJECT_DIR$/src/rf.py" />
-        <option value="$PROJECT_DIR$/src/clustering.py" />
         <option value="$PROJECT_DIR$/src/NN_Experiments.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/src/data_preprocess.py" />
+        <option value="$PROJECT_DIR$/../ml.7641/A1/visualize_data.py" />
+        <option value="$PROJECT_DIR$/data/abalone.csv" />
+        <option value="$PROJECT_DIR$/src/data_visualization.py" />
+        <option value="$PROJECT_DIR$/src/clustering.py" />
+        <option value="$PROJECT_DIR$/src/helpers.py" />
+        <option value="$PROJECT_DIR$/src/NN Experiments.ipynb" />
       </list>
     </option>
   </component>
@@ -170,6 +231,22 @@
             <path>
               <item name="cs-7641-A3" type="b2602c69:ProjectViewProjectNode" />
               <item name="cs-7641-A3" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs-7641-A3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs-7641-A3" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs-7641-A3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs-7641-A3" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="clustering" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs-7641-A3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs-7641-A3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -185,6 +262,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -197,7 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.data_visualization">
     <configuration name="NN_Experiments" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cs-7641-A3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,8 +302,59 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="data_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cs-7641-A3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/data_preprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_visualization" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cs-7641-A3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/data_visualization.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.NN_Experiments" />
+      <item itemvalue="Python.data_preprocess" />
+      <item itemvalue="Python.data_visualization" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_visualization" />
+        <item itemvalue="Python.data_preprocess" />
         <item itemvalue="Python.NN_Experiments" />
       </list>
     </recent_temporary>
@@ -248,7 +381,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41122448" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26938775" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -262,7 +395,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.32967034" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -271,6 +404,28 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="df['3'].min()" language="Python" />
+        <watch expression="df['3'].max()" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>df['3'].max()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['3'].min()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/ensemble/forest.py">
@@ -414,38 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2707">
-          <caret line="265" column="30" selection-start-line="265" selection-start-column="30" selection-end-line="265" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data_preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1612">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NN_Experiments.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -458,8 +581,197 @@
     </entry>
     <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/cluster/k_means_.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
+        <state relative-caret-position="8789">
           <caret line="911" column="10" lean-forward="true" selection-start-line="911" selection-start-column="10" selection-end-line="911" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_validation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_contingecy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_components.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abalone_test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/contraceptive_test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/contraceptive.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/sample.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ml.7641/A1/visualize_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/optdigits_train.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/class.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/h_occupation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/children.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/histogram_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/media.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/h_education.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="2762" column="4" selection-start-line="2762" selection-start-column="4" selection-end-line="2762" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/contraceptive_train.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/optdigits_test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abalone_train.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="47" column="68" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_clusters.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/digits_clusters.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abalone.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="2098" column="48" selection-start-line="2098" selection-start-column="48" selection-end-line="2098" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/digits_validation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_contingecy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_validation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_clusters.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_components.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/clustering/contraceptive_2D.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/clustering/abalone_2D.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/matplotlib/axes/_axes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="4134" column="16" selection-start-line="4134" selection-start-column="16" selection-end-line="4134" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/manifold/t_sne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="479" column="47" lean-forward="true" selection-start-line="479" selection-start-column="20" selection-end-line="479" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="455" column="46" selection-start-line="455" selection-start-column="42" selection-end-line="455" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NN Experiments.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
