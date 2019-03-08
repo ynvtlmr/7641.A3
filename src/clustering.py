@@ -17,7 +17,7 @@ import seaborn as sns
 import warnings
 
 matplotlib.use('agg')
-warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.filterwarnings('ignore')
 
 
 def get_one_hot(targets, nb_classes):
@@ -241,7 +241,7 @@ def generate_validation_plots(name, rdir, pdir):
     plt.close()
 
 
-def get_cluster_data(X, y, name, km_k, gmm_k, rdir, pdir, perplexity=200):
+def get_cluster_data(X, y, name, km_k, gmm_k, rdir, pdir, perplexity=50):
     """Generates 2D dataset that contains cluster labels for K-Means and GMM,
     as well as the class labels for the given dataset.
 
@@ -289,7 +289,7 @@ def generate_contingency_matrix(kmeans_contigency,
     fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(14, 3))
     ax1 = sns.heatmap(
         kmeans_contigency,
-        linewidths=.5, cmap="YlGnBu",
+        linewidths=.5, cmap="RdYlGn",
         ax=ax1)
     ax1.set_title('K-Means Clusters ({})'.format(name))
     ax1.set_xlabel('Cluster')
@@ -297,7 +297,7 @@ def generate_contingency_matrix(kmeans_contigency,
 
     ax2 = sns.heatmap(
         gmm_continigency,
-        linewidths=.5, cmap="YlGnBu",
+        linewidths=.5, cmap="RdYlGn",
         ax=ax2)
     ax2.set_title('GMM Clusters ({})'.format(name))
     ax2.set_xlabel('Cluster')
@@ -336,20 +336,20 @@ def generate_cluster_plots(df, name, pdir):
 
     # plot cluster scatter plots
     fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(14, 3))
-    ax1.scatter(x1, x2, marker='o', s=20, c=km, cmap='tabl10')  # cmap='gist_rainbow'
+    ax1.scatter(x1, x2, marker='o', s=20, c=km, cmap='gist_rainbow')
     ax1.set_title('K-Means Clusters ({})'.format(name))
     ax1.set_ylabel('x1')
     ax1.set_xlabel('x2')
     ax1.grid(color='grey', linestyle='dotted')
 
-    ax2.scatter(x1, x2, marker='o', s=20, c=gmm, cmap='tabl10')  # cmap='gist_rainbow'
+    ax2.scatter(x1, x2, marker='o', s=20, c=gmm, cmap='gist_rainbow')
     ax2.set_title('GMM Clusters ({})'.format(name))
     ax2.set_ylabel('x1')
     ax2.set_xlabel('x2')
     ax2.grid(color='grey', linestyle='dotted')
 
     # change color map depending on dataset
-    ax3.scatter(x1, x2, marker='o', s=20, c=c, cmap='gist_rainbow')  # cmap='hsv'
+    ax3.scatter(x1, x2, marker='o', s=20, c=c, cmap='gist_rainbow')
     ax3.set_title('Class Labels ({})'.format(name))
     ax3.set_ylabel('x1')
     ax3.set_xlabel('x2')
@@ -445,10 +445,12 @@ def main():
         generate_validation_plots(name='abalone', rdir=rdir, pdir=pdir)
     else:
         get_cluster_data(
-            digits_X, digits_y, 'digits', km_k=10, gmm_k=10, rdir=rdir, pdir=pdir,
+            digits_X, digits_y, 'digits',
+            km_k=10, gmm_k=10, rdir=rdir, pdir=pdir,
         )
         get_cluster_data(
-            abalone_X, abalone_y, 'abalone', km_k=3, gmm_k=3, rdir=rdir, pdir=pdir,
+            abalone_X, abalone_y, 'abalone',
+            km_k=3, gmm_k=3, rdir=rdir, pdir=pdir,
         )
 
         # generate 2D data for cluster visualization

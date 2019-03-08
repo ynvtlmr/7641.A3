@@ -14,7 +14,7 @@ files = [f for f in os.listdir(path) if f.find('_') < 0]
 for filename in files:
     p = os.path.join(path, filename)
     df = pd.read_csv(p)
-    cols = df.columns
+    cols = df.columns.sort()
     classes = df['class'].unique()
 
     directory = os.path.join(fig_path, filename.split('.')[0])

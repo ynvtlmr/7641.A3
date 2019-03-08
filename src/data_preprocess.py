@@ -45,7 +45,7 @@ if __name__ == '__main__':
     print('Processing \n')
     tdir = 'data'
 
-    names = ['abalone', 'contraceptive']
+    names = ['abalone', 'optdigits']
     for n in names:
         df = pd.read_csv(
             '../data/{}.csv'.format(n)

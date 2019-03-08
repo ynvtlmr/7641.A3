@@ -152,11 +152,11 @@ def run_clustering(digits_y, abalone_y, rdir, pdir, experiment=False):
     # # generate 2D data for cluster visualization
     get_cluster_data(
         digits_X, digits_y, 'digits',
-        km_k=3, gmm_k=9, rdir=rdir, pdir=pdir,
+        km_k=10, gmm_k=10, rdir=rdir, pdir=pdir,
     )
     get_cluster_data(
         abalone_X, abalone_y, 'abalone',
-        km_k=5, gmm_k=10, rdir=rdir, pdir=pdir
+        km_k=3, gmm_k=3, rdir=rdir, pdir=pdir
     )
     # generate validation plots (relative performance of clustering)
     df_digits_2D = pd.read_csv(get_abspath('digits_2D.csv', rdir))

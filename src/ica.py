@@ -156,12 +156,12 @@ def run_clustering(digits_y, abalone_y, rdir, pdir, experiment=False):
     # generate 2D data for cluster visualization
     get_cluster_data(
         digits_X, digits_y, 'digits',
-        km_k=20, gmm_k=12,
+        km_k=10, gmm_k=10,
         rdir=rdir, pdir=pdir,
     )
     get_cluster_data(
         abalone_X, abalone_y, 'abalone',
-        km_k=4, gmm_k=10, rdir=rdir, pdir=pdir,
+        km_k=3, gmm_k=3, rdir=rdir, pdir=pdir,
     )
 
     # generate validation plots (relative performance of clustering)

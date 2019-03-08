@@ -18,3 +18,5 @@ python rp.py
 python rf.py --dimension 1
 python rf.py --cluster_exp 1
 python rf.py
+
+python NN_Experiments.py > ../results/NN/NN_Output.txt

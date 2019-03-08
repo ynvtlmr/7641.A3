@@ -61,6 +61,11 @@ def get_abspath(filename, filepath):
         p = '/content/gdrive/My Drive/COLAB/temp/'
     else:
         p = os.path.abspath(os.path.join(os.curdir, os.pardir))
+
+    fulldir = os.path.join(p, filepath)
+    if not os.path.exists(fulldir):
+        os.makedirs(fulldir)
+
     fullpath = os.path.join(p, filepath, filename)
 
     return fullpath

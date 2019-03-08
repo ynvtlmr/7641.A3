@@ -4,6 +4,7 @@
 
 import os
 import timeit
+import csv
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -26,6 +27,14 @@ warnings.filterwarnings('ignore')
 def get_one_hot(targets, nb_classes):
     res = np.eye(nb_classes)[np.array(targets).reshape(-1)]
     return res.reshape(list(targets.shape) + [nb_classes])
+
+
+def dict_to_csv(dict_data, csv_file):
+    with open(csv_file, 'w') as csvfile:
+        writer = csv.DictWriter(csvfile)
+        writer.writeheader()
+        for data in dict_data:
+            writer.writerow(data)
 
 
 # In[2]:

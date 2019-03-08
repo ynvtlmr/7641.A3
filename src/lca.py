@@ -7,7 +7,8 @@ from clustering import clustering_experiment, generate_cluster_plots
 from clustering import generate_component_plots, nn_cluster_datasets
 from sklearn.preprocessing import StandardScaler
 from helpers import get_abspath, save_array
-from sklearn.decomposition import PCA
+# from sklearn.decomposition import PCA
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 import matplotlib
 
 matplotlib.use('agg')
@@ -15,8 +16,8 @@ import matplotlib.pyplot as plt
 import seaborn
 
 
-def pca_experiment(X, name, dims, evp):
-    """Run PCA on specified dataset and saves dataset with components that
+def lda_experiment(X, name, dims, evp):
+    """Run LDA on specified dataset and saves dataset with components that
     explain at least 85% of total variance or 2 components which ever is larger
 
     Args:
@@ -26,33 +27,33 @@ def pca_experiment(X, name, dims, evp):
         evp (float): Explained variance percentage threshold.
 
     """
-    pca = PCA(random_state=0, svd_solver='full', n_components=dims)
+    lda = LDA(random_state=0, svd_solver='full', n_components=dims)
 
-    comps = pca.fit_transform(
+    comps = lda.fit_transform(
         StandardScaler().fit_transform(X)
     )  # get principal components
 
     # cumulative explained variance greater than threshold
     r = range(1, dims + 1)
-    ev = pd.Series(pca.explained_variance_, index=r, name='ev')
-    evr = pd.Series(pca.explained_variance_ratio_, index=r, name='evr')
+    ev = pd.Series(lda.explained_variance_, index=r, name='ev')
+    evr = pd.Series(lda.explained_variance_ratio_, index=r, name='evr')
     evrc = evr.rename('evr_cum').cumsum()
     res = comps[:, :max(evrc.where(evrc > evp).idxmin(), 2)]
     error = []
     for _ in range(1, dims + 1):
         print(_)
-        pca = PCA(random_state=0, svd_solver='full', n_components=_)
-        comps = pca.fit_transform(
+        lda = LDA(random_state=0, svd_solver='full', n_components=_)
+        comps = lda.fit_transform(
             StandardScaler().fit_transform(X)
         )  # get principal components
-        data_reduced = np.dot(X, pca.components_.T)
-        error.append(((X - np.dot(data_reduced, pca.components_)) ** 2).mean())
+        data_reduced = np.dot(X, lda.components_.T)
+        error.append(((X - np.dot(data_reduced, lda.components_)) ** 2).mean())
 
     evars = pd.concat((ev, evr, evrc), axis=1)
     evars['loss'] = error
 
     # save results as CSV
-    resdir = 'results/PCA'
+    resdir = 'results/LDA'
     evfile = get_abspath('{}_variances.csv'.format(name), resdir)
     resfile = get_abspath('{}_projected.csv'.format(name), resdir)
     save_array(array=res, filename=resfile, subdir=resdir)
@@ -68,7 +69,7 @@ def generate_variance_plot(name, evp):
         evp (float): Explained variance percentage threshold.
 
     """
-    resdir = 'results/PCA'
+    resdir = 'results/LDA'
     df = pd.read_csv(get_abspath('{}_variances.csv'.format(name), resdir))
 
     # get figure and axes
@@ -81,7 +82,7 @@ def generate_variance_plot(name, evp):
     ax.plot(x, evr, marker='.', color='b', label='EVR')
     ax.plot(x, evr_cum, marker='.', color='g', label='Cumulative EVR')
     vmark = evr_cum.where(evr_cum > evp).idxmin() + 1
-    fig.suptitle('PCA Explained Variance by PC ({})'.format(name))
+    fig.suptitle('LDA Explained Variance by PC ({})'.format(name))
     ax.set_title(
         '{:.2%} Cumulative Variance \n Explained by {} Components'.format(
             evr_cum[vmark - 1], vmark
@@ -93,7 +94,7 @@ def generate_variance_plot(name, evp):
     ax.grid(color='grey', linestyle='dotted')
     loss = df['loss']
     ax1.plot(x, loss, marker='.', color='r')
-    ax1.set_title('PCA Mean Loss ({})'.format(name))
+    ax1.set_title('LDA Mean Loss ({})'.format(name))
     ax1.set_ylabel('Mean loss')
     ax1.set_xlabel('# Components')
 
@@ -105,7 +106,7 @@ def generate_variance_plot(name, evp):
             item.set_fontsize(8)
 
     # save figure
-    plotdir = 'plots/PCA'
+    plotdir = 'plots/LDA'
     plotpath = get_abspath('{}_explvar.png'.format(name), plotdir)
     plt.savefig(plotpath)
     plt.close()
@@ -138,7 +139,7 @@ def run_clustering(digits_y, abalone_y, rdir, pdir, experiment=False):
     pdir = pdir + '/clustering'
 
     if experiment:
-        # re-run clustering experiments after applying PCA
+        # re-run clustering experiments after applying LDA
         clusters = range(2, 51)
         clustering_experiment(abalone_X, abalone_y, 'abalone', clusters, rdir=rdir)
         clustering_experiment(digits_X, digits_y, 'digits', clusters, rdir=rdir)
@@ -196,25 +197,25 @@ def main():
 
     digits_dim = digits_X.shape[1]
     abalone_dim = abalone_X.shape[1]
-    rdir = 'results/PCA'
-    pdir = 'plots/PCA'
+    rdir = 'results/LDA'
+    pdir = 'plots/LDA'
 
-    print('Running PCA experiments')
+    print('Running LDA experiments')
     start_time = timeit.default_timer()
     if args.dimension:
         # set explained variance threshold
         evp = 0.90
 
-        # generate PCA results
-        pca_experiment(digits_X, 'digits', dims=digits_dim, evp=evp)
-        pca_experiment(abalone_X, 'abalone', dims=abalone_dim, evp=evp)
+        # generate LDA results
+        lda_experiment(digits_X, 'digits', dims=digits_dim, evp=evp)
+        lda_experiment(abalone_X, 'abalone', dims=abalone_dim, evp=evp)
 
-        # generate PCA explained variance plots
+        # generate LDA explained variance plots
         generate_variance_plot('digits', evp=evp)
         generate_variance_plot('abalone', evp=evp)
         end_time = timeit.default_timer()
         elapsed = end_time - start_time
-        print("Completed PCA experiments in {} seconds".format(elapsed))
+        print("Completed LDA experiments in {} seconds".format(elapsed))
     else:
         # re-run clustering experiments
         run_clustering(
@@ -228,7 +229,7 @@ def main():
     # calculate and print running time
     end_time = timeit.default_timer()
     elapsed = end_time - start_time
-    print("Completed PCA experiments in {} seconds".format(elapsed))
+    print("Completed LDA experiments in {} seconds".format(elapsed))
 
 
 if __name__ == '__main__':
