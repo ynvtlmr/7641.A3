@@ -289,7 +289,7 @@ def generate_contingency_matrix(kmeans_contigency,
     fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(14, 3))
     ax1 = sns.heatmap(
         kmeans_contigency,
-        linewidths=.5, cmap="RdYlGn",
+        linewidths=.5, cmap="coolwarm",
         ax=ax1)
     ax1.set_title('K-Means Clusters ({})'.format(name))
     ax1.set_xlabel('Cluster')
@@ -297,7 +297,7 @@ def generate_contingency_matrix(kmeans_contigency,
 
     ax2 = sns.heatmap(
         gmm_continigency,
-        linewidths=.5, cmap="RdYlGn",
+        linewidths=.5, cmap="coolwarm",
         ax=ax2)
     ax2.set_title('GMM Clusters ({})'.format(name))
     ax2.set_xlabel('Cluster')
@@ -336,20 +336,20 @@ def generate_cluster_plots(df, name, pdir):
 
     # plot cluster scatter plots
     fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(14, 3))
-    ax1.scatter(x1, x2, marker='o', s=20, c=km, cmap='gist_rainbow')
+    ax1.scatter(x1, x2, marker='o', s=20, c=km, cmap='rainbow')
     ax1.set_title('K-Means Clusters ({})'.format(name))
     ax1.set_ylabel('x1')
     ax1.set_xlabel('x2')
     ax1.grid(color='grey', linestyle='dotted')
 
-    ax2.scatter(x1, x2, marker='o', s=20, c=gmm, cmap='gist_rainbow')
+    ax2.scatter(x1, x2, marker='o', s=20, c=gmm, cmap='rainbow')
     ax2.set_title('GMM Clusters ({})'.format(name))
     ax2.set_ylabel('x1')
     ax2.set_xlabel('x2')
     ax2.grid(color='grey', linestyle='dotted')
 
     # change color map depending on dataset
-    ax3.scatter(x1, x2, marker='o', s=20, c=c, cmap='gist_rainbow')
+    ax3.scatter(x1, x2, marker='o', s=20, c=c, cmap='rainbow')
     ax3.set_title('Class Labels ({})'.format(name))
     ax3.set_ylabel('x1')
     ax3.set_xlabel('x2')

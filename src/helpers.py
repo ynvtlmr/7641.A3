@@ -56,11 +56,12 @@ def get_abspath(filename, filepath):
         fullpath (str): Absolute filepath.
 
     """
-    is_colab = 'google.colab' in sys.modules
-    if is_colab:
-        p = '/content/gdrive/My Drive/COLAB/temp/'
-    else:
-        p = os.path.abspath(os.path.join(os.curdir, os.pardir))
+
+    p = os.path.abspath(os.path.join(os.curdir, os.pardir))
+
+    # is_colab = 'google.colab' in sys.modules
+    # if is_colab:
+    #     p = '/content/gdrive/My Drive/COLAB/temp/'
 
     fulldir = os.path.join(p, filepath)
     if not os.path.exists(fulldir):

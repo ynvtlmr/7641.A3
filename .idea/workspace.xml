@@ -2,146 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d01ea630-0557-410a-a06f-9aea30f23799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/optdigits.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/abalone_original.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/contraceptive.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/contraceptive_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/contraceptive_train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/abalone_kurtosis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/abalone_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/abalone_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/abalone_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/abalone_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/digits_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/digits_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/digits_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/digits_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/ICA/digits_kurtosis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/NN/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/abalone_explvar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/abalone_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/abalone_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/abalone_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/abalone_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/digits_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/digits_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/digits_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/digits_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/PCA/digits_explvar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/abalone_fi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/abalone_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/abalone_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/abalone_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/abalone_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/digits_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/digits_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/digits_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/digits_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RF/digits_fi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/abalone_metrics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/abalone_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/abalone_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/abalone_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/abalone_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/digits_clusters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/digits_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/digits_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/digits_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/RP/digits_metrics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/abalone_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/abalone_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/abalone_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/contraceptive_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/contraceptive_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/contraceptive_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/digits_components.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/digits_contingecy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/clustering/digits_validation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/0_F.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/0_I.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/0_M.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/class.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/histogram_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/histogram_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/abalone/histogram_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/children.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/class.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/h_education.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/h_occupation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/histogram_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/histogram_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/histogram_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/living.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/media.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/w_age.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/w_education.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/w_employed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/data/contraceptive/w_religion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/abalone_kurtosis.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/abalone_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/abalone_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/abalone_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/digits_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/digits_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/digits_kurtosis.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/ICA/digits_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/NN/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/abalone_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/abalone_variances.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/clustering/abalone_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/clustering/abalone_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/clustering/digits_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/clustering/digits_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/digits_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/PCA/digits_variances.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/abalone_fi.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/abalone_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/clustering/abalone_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/clustering/abalone_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/clustering/digits_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/clustering/digits_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/digits_fi.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RF/digits_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/abalone_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/abalone_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/clustering/abalone_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/clustering/abalone_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/clustering/digits_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/clustering/digits_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/digits_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/RP/digits_projected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/clustering/abalone_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/clustering/abalone_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/clustering/contraceptive_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/clustering/contraceptive_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/clustering/digits_2D.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/clustering/digits_train_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/clustering/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NN_Experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NN_Experiments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/abalone.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/abalone_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/ICA/clustering/abalone_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/abalone_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/ICA/clustering/abalone_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/digits_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/ICA/clustering/digits_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/ICA/clustering/digits_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/ICA/clustering/digits_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/ICA/digits_kurtosis.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/ICA/digits_kurtosis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/abalone_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/PCA/clustering/abalone_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/abalone_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/PCA/clustering/abalone_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/digits_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/PCA/clustering/digits_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/PCA/clustering/digits_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/PCA/clustering/digits_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/abalone_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RF/clustering/abalone_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/abalone_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RF/clustering/abalone_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/digits_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RF/clustering/digits_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RF/clustering/digits_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RF/clustering/digits_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/abalone_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RP/clustering/abalone_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/abalone_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RP/clustering/abalone_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/digits_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RP/clustering/digits_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/RP/clustering/digits_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/RP/clustering/digits_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/clustering/abalone_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/clustering/abalone_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/clustering/abalone_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/clustering/abalone_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/clustering/digits_clusters.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/clustering/digits_clusters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/clustering/digits_contingecy.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots/clustering/digits_contingecy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/ICA/abalone_projected.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/ICA/abalone_projected.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/abalone_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/ICA/clustering/abalone_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/abalone_train_metrics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/ICA/clustering/abalone_train_metrics.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/ICA/clustering/digits_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/ICA/clustering/digits_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/ICA/digits_kurtosis.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/ICA/digits_kurtosis.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/NN/NN_Output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/NN/NN_Output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/PCA/clustering/abalone_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/PCA/clustering/abalone_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/PCA/clustering/digits_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/PCA/clustering/digits_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/RF/clustering/abalone_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/RF/clustering/abalone_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/RF/clustering/digits_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/RF/clustering/digits_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/RP/clustering/abalone_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/RP/clustering/abalone_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/RP/clustering/digits_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/RP/clustering/digits_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/clustering/abalone_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/clustering/abalone_2D.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/clustering/digits_2D.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/clustering/digits_2D.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_visualization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ica.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ica.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rf.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/run.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,6 +53,8 @@
     <SUITE FILE_PATH="coverage/cs_7641_A3$NN_Experiments.coverage" NAME="NN_Experiments Coverage Results" MODIFIED="1551943273964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/cs_7641_A3$lca.coverage" NAME="lca Coverage Results" MODIFIED="1551992428216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/cs_7641_A3$data_visualization.coverage" NAME="data_visualization Coverage Results" MODIFIED="1551933483196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/cs_7641_A3$pca.coverage" NAME="pca Coverage Results" MODIFIED="1552093490233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/cs_7641_A3$clustering.coverage" NAME="clustering Coverage Results" MODIFIED="1552010919235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/cs_7641_A3$data_preprocess.coverage" NAME="data_preprocess Coverage Results" MODIFIED="1551855562052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -167,28 +69,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="25" />
+          <entry key="csv" value="31" />
           <entry key="gitignore" value="1" />
           <entry key="ipynb" value="1" />
-          <entry key="png" value="38" />
-          <entry key="py" value="60" />
-          <entry key="sh" value="3" />
-          <entry key="txt" value="8" />
+          <entry key="png" value="41" />
+          <entry key="py" value="74" />
+          <entry key="sh" value="4" />
+          <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="3" />
+          <entry key="Bash" value="4" />
           <entry key="IPNB" value="1" />
-          <entry key="Image" value="38" />
-          <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="60" />
+          <entry key="Image" value="41" />
+          <entry key="PLAIN_TEXT" value="42" />
+          <entry key="Python" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="py" value="1251" />
+          <entry key="py" value="1268" />
           <entry key="sh" value="40" />
           <entry key="txt" value="95" />
         </counts>
@@ -197,18 +99,57 @@
         <counts>
           <entry key="Bash" value="40" />
           <entry key="PLAIN_TEXT" value="96" />
-          <entry key="Python" value="1251" />
+          <entry key="Python" value="1268" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="338" column="68" selection-start-line="338" selection-start-column="68" selection-end-line="338" selection-end-column="68" />
+            <state relative-caret-position="132">
+              <caret line="262" selection-start-line="262" selection-end-line="262" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/metrics/cluster/supervised.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/manifold/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/manifold/t_sne.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="479" column="47" selection-start-line="479" selection-start-column="20" selection-end-line="479" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pca.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="158" selection-start-line="158" selection-end-line="158" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -217,10 +158,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/discriminant_analysis.py">
+        <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/numpy/lib/npyio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="476" column="15" selection-start-line="476" selection-start-column="15" selection-end-line="476" selection-end-column="15" />
+            <state relative-caret-position="287">
+              <caret line="882" selection-start-line="882" selection-end-line="882" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/helpers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="135" column="19" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ica.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="830">
+              <caret line="168" column="65" selection-start-line="168" selection-start-column="61" selection-end-line="168" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,43 +213,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>generate_component_plots</find>
-      <find>map</find>
-      <find>plt</find>
-      <find>cmap</find>
-      <find>os.path.abspath</find>
-      <find>savefig(</find>
-      <find>2D</find>
-      <find>&quot;</find>
-      <find>=50</find>
-      <find>=20</find>
-      <find>rainbow</find>
-      <find>gmm_k</find>
-      <find>km_k=</find>
-      <find>headers</find>
-      <find>results</find>
-      <find>sample</find>
-      <find>clus</find>
-      <find>_k</find>
-      <find>csv</find>
-      <find>cmap=</find>
-      <find>conting</find>
-      <find>generate_contingency_matrix</find>
-      <find>get_cluster_data</find>
-      <find>variance</find>
-      <find>explained_variance_ratio_</find>
-      <find>explained_variance_</find>
-      <find>components</find>
       <find>pca</find>
       <find>PCA</find>
+      <find>tab10</find>
       <find>n_components</find>
+      <find>class</find>
+      <find>cmap</find>
+      <find>abalone</find>
+      <find>kurtosis</find>
+      <find>Kurtosis</find>
+      <find>Kurtosis</find>
+      <find>my</find>
+      <find>clus</find>
+      <find>rainbow</find>
+      <find>rainbo</find>
+      <find>clusters (</find>
+      <find>generate_contingency_matrix</find>
+      <find>generate_cluster_plots</find>
+      <find>_2D</find>
+      <find>x2'</find>
+      <find>cluster</find>
+      <find>_2d</find>
+      <find>save_ica_results</find>
+      <find>digits_dim</find>
+      <find>dims=</find>
+      <find>dims</find>
+      <find>cluste</find>
+      <find>get_cluster_data</find>
+      <find>_projected</find>
+      <find>TSNE</find>
+      <find>contingency_matrix</find>
     </findStrings>
     <replaceStrings>
       <replace>plt.close()</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -295,8 +272,9 @@
         <option value="$PROJECT_DIR$/src/NN_Experiments.py" />
         <option value="$PROJECT_DIR$/src/run.sh" />
         <option value="$PROJECT_DIR$/src/data_preprocess.py" />
-        <option value="$PROJECT_DIR$/src/helpers.py" />
         <option value="$PROJECT_DIR$/src/lca.py" />
+        <option value="$PROJECT_DIR$/src/abalone_preprocess.py" />
+        <option value="$PROJECT_DIR$/src/helpers.py" />
         <option value="$PROJECT_DIR$/src/clustering.py" />
       </list>
     </option>
@@ -346,8 +324,8 @@
       <recent name="$PROJECT_DIR$/data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -362,7 +340,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lca">
+  <component name="RunManager" selected="Python.pca">
     <configuration name="NN_Experiments" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cs-7641-A3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -385,7 +363,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="clustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cs-7641-A3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -398,7 +376,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/data_preprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/clustering.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -451,18 +429,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pca" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cs-7641-A3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pca.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.NN_Experiments" />
-      <item itemvalue="Python.data_preprocess" />
       <item itemvalue="Python.data_visualization" />
       <item itemvalue="Python.lca" />
+      <item itemvalue="Python.clustering" />
+      <item itemvalue="Python.pca" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pca" />
+        <item itemvalue="Python.clustering" />
         <item itemvalue="Python.lca" />
         <item itemvalue="Python.NN_Experiments" />
         <item itemvalue="Python.data_visualization" />
-        <item itemvalue="Python.data_preprocess" />
       </list>
     </recent_temporary>
   </component>
@@ -483,13 +485,13 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.26938775" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -502,7 +504,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.30586082" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.30586082" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -525,6 +527,16 @@
           <line>1593</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/pca.py</url>
+          <line>188</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/pca.py</url>
+          <line>208</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -543,75 +555,13 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/media.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plots/data/contraceptive/h_education.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="2762" column="4" selection-start-line="2762" selection-start-column="4" selection-end-line="2762" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/contraceptive_train.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/optdigits_test.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/abalone_train.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="47" column="68" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plots/clustering/digits_validation.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_contingecy.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_validation.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_clusters.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plots/clustering/contraceptive_components.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/clustering/contraceptive_2D.csv">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/clustering/abalone_2D.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/matplotlib/axes/_axes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
           <caret line="4134" column="16" selection-start-line="4134" selection-start-column="16" selection-end-line="4134" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/manifold/t_sne.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="479" column="47" lean-forward="true" selection-start-line="479" selection-start-column="20" selection-end-line="479" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -642,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/abalone.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/pandas/core/groupby/groupby.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -662,9 +605,6 @@
           <caret line="974" selection-start-line="974" selection-end-line="974" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_clusters.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/plots/clustering/digits_clusters.png">
       <provider selected="true" editor-type-id="images" />
@@ -697,28 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="158" column="14" selection-start-line="158" selection-start-column="14" selection-end-line="158" selection-end-column="14" />
-          <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ica.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="163" column="14" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
-          <caret line="163" column="23" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -733,35 +651,8 @@
     <entry file="file://$PROJECT_DIR$/src/NN_Output.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/NN/NN_Output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/clustering/sample.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data_preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/metrics/classification.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -791,13 +682,6 @@
     <entry file="file://$PROJECT_DIR$/results/clustering/abalone_train_metrics.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/discriminant_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="476" column="15" selection-start-line="476" selection-start-column="15" selection-end-line="476" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/numpy/lib/_datasource.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9165">
@@ -812,10 +696,133 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results/NN/NN_Output.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/NN/sample.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/discriminant_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="476" column="15" selection-start-line="476" selection-start-column="15" selection-end-line="476" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/abalone_preprocess.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_contingecy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_components.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/clustering/abalone_clusters.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abalone_original.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/abalone.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/scipy/stats/stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="1330" column="4" selection-start-line="1330" selection-start-column="4" selection-end-line="1330" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ica.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="168" column="65" selection-start-line="168" selection-start-column="61" selection-end-line="168" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/clustering/abalone_2D.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/PCA/clustering/abalone_2D.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/PCA/abalone_projected.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/ICA/abalone_projected.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="135" column="19" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/manifold/t_sne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="479" column="47" selection-start-line="479" selection-start-column="20" selection-end-line="479" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/manifold/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="882" selection-start-line="882" selection-end-line="882" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pca.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="46" column="37" selection-end-line="235" />
+        <state relative-caret-position="173">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -824,11 +831,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="338" column="68" selection-start-line="338" selection-start-column="68" selection-end-line="338" selection-end-column="68" />
+        <state relative-caret-position="132">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/py37/lib/python3.7/site-packages/sklearn/metrics/cluster/supervised.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="77" />
         </state>
       </provider>
     </entry>
