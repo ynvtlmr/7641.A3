@@ -106,6 +106,98 @@ def clustering_experiment(X, y, name, clusters, rdir):
     metrics.to_csv(resfile, index_label='k')
 
 
+def clustering_experiment_test(X, y, X_test, y_test, name, clusters, rdir):
+    """Generate results CSVs for given datasets using the K-Means and EM
+    clustering algorithms.
+
+    Args:
+        X (Numpy.Array): Attributes.
+        y (Numpy.Array): Labels.
+        name (str): Dataset name.
+        clusters (list[int]): List of k values.
+        rdir (str): Output directory.
+
+    """
+    sse = defaultdict(dict)  # sum of squared errors
+    logl = defaultdict(dict)  # log-likelihood
+    sse_test = defaultdict(dict)  # sum of squared errors
+    logl_test = defaultdict(dict)  # log-likelihood
+    # bic = defaultdict(dict)  # BIC for EM
+    # aic = defaultdict(dict)  # AIC for EM
+    # aic = defaultdict(dict)  # AIC for EM
+    # silhouette = defaultdict(dict)  # silhouette score
+    # acc = defaultdict(lambda: defaultdict(dict))  # accuracy scores
+    # adjmi = defaultdict(lambda: defaultdict(dict))  # adjusted mutual info
+    # homo = defaultdict(lambda: defaultdict(dict))  # adjusted mutual info
+    km = KMeans(random_state=0)  # K-Means
+    gmm = GMM(random_state=0)  # Gaussian Mixture Model (EM)
+
+    # start loop for given values of k
+    print('DATESET: %s' % name)
+    for k in clusters:
+        print('K: %s' % k)
+        km.set_params(n_clusters=k)
+        gmm.set_params(n_components=k)
+        km.fit(X)
+        gmm.fit(X)
+
+        # calculate SSE, log-likelihood, accuracy, and adjusted mutual info
+        sse[k][name] = km.score(X)
+        logl[k][name] = gmm.score(X)
+        sse_test[k][name] = km.score(X_test)
+        logl_test[k][name] = gmm.score(X_test)
+
+        # acc[k][name]['km'] = cluster_acc(y, km.predict(X))
+        # acc[k][name]['gmm'] = cluster_acc(y, gmm.predict(X))
+        # adjmi[k][name]['km'] = ami(y, km.predict(X))
+        # adjmi[k][name]['gmm'] = ami(y, gmm.predict(X))
+        #
+        # homo[k][name]['km'] = homogeneity_score(y, km.predict(X))
+        # homo[k][name]['gmm'] = homogeneity_score(y, gmm.predict(X))
+
+        # calculate silhouette score for K-Means
+        # km_silhouette = silhouette_score(X, km.predict(X))
+        # silhouette[k][name] = km_silhouette
+        #
+        # # calculate BIC for EM
+        # bic[k][name] = gmm.bic(X)
+        # aic[k][name] = gmm.aic(X)
+
+    # generate output dataframes
+    sse = (-pd.DataFrame(sse)).T
+    sse.rename(columns={name: 'sse'}, inplace=True)
+    logl = pd.DataFrame(logl).T
+    logl.rename(columns={name: 'log-likelihood'}, inplace=True)
+
+    sse_test = (-pd.DataFrame(sse_test)).T
+    sse_test.rename(columns={name: 'sse_test'}, inplace=True)
+    logl_test = pd.DataFrame(logl_test).T
+    logl_test.rename(columns={name: 'log-likelihood_test'}, inplace=True)
+
+    # bic = pd.DataFrame(bic).T
+    # bic.rename(columns={name: 'bic'}, inplace=True)
+    # aic = pd.DataFrame(aic).T
+    # aic.rename(columns={name: 'aic'}, inplace=True)
+    # silhouette = pd.DataFrame(silhouette).T
+    # silhouette.rename(columns={name: 'silhouette_score'}, inplace=True)
+    # acc = pd.Panel(acc)
+    # acc = acc.loc[:, :, name].T.rename(
+    #     lambda x: '{}_acc'.format(x), axis='columns')
+    # adjmi = pd.Panel(adjmi)
+    # adjmi = adjmi.loc[:, :, name].T.rename(
+    #     lambda x: '{}_adjmi'.format(x), axis='columns')
+    # homo = pd.Panel(homo)
+    # homo = homo.loc[:, :, name].T.rename(
+    #     lambda x: '{}_homo'.format(x), axis='columns')
+
+    # concatenate all results
+    dfs = (sse, logl, sse_test, logl_test)
+    metrics = pd.concat(dfs, axis=1)
+    print(metrics)
+    resfile = get_abspath('{}_train_test_metrics.csv'.format(name), rdir)
+    metrics.to_csv(resfile, index_label='k')
+
+
 def generate_component_plots(name, rdir, pdir):
     """Generates plots of result files for given dataset.
 
@@ -119,6 +211,10 @@ def generate_component_plots(name, rdir, pdir):
         get_abspath('{}_train_metrics.csv'.format(name), rdir)
     )
 
+    # test_metrics = pd.read_csv(
+    #     get_abspath('{}_train_test_metrics.csv'.format(name), rdir)
+    # )
+
     # get figure and axes
     fig, (ax1, ax2, ax3, ax4) = plt.subplots(nrows=1,
                                              ncols=4,
@@ -127,7 +223,9 @@ def generate_component_plots(name, rdir, pdir):
     # plot SSE for K-Means
     k = metrics['k']
     metric = metrics['sse']
+    # test_metric = test_metrics['sse_test']
     ax1.plot(k, metric, marker='o', markersize=5, color='g')
+    # ax1.plot(k, test_metric, marker='o', markersize=5, color='r')
     ax1.set_title('K-Means SSE ({})'.format(name), fontsize=14)
     ax1.set_ylabel('Sum of squared error')
     ax1.set_xlabel('Number of clusters (k)')
@@ -143,7 +241,9 @@ def generate_component_plots(name, rdir, pdir):
 
     # plot log-likelihood for EM
     metric = metrics['log-likelihood']
+    # test_metric = test_metrics['log-likelihood_test']
     ax3.plot(k, metric, marker='o', markersize=5, color='r')
+    # ax3.plot(k, test_metric, marker='o', markersize=5, color='r')
     ax3.set_title('GMM Log-likelihood ({})'.format(name), fontsize=14)
     ax3.set_ylabel('Log-likelihood')
     ax3.set_xlabel('Number of clusters (k)')
@@ -429,12 +529,26 @@ def main():
     abalone_y = train_df.iloc[:, -1:].values.flatten()
     abalone_X = train_df.iloc[:, :-1].values
 
+    test_df = pd.read_csv('../data/optdigits_test.csv', header=None)
+    digits_y_test = test_df.iloc[:, -1:].values.flatten()
+    digits_X_test = test_df.iloc[:, :-1].values
+
+    test_df = pd.read_csv('../data/abalone_test.csv', header=None)
+    abalone_y_test = test_df.iloc[:, -1:].values.flatten()
+    abalone_X_test = test_df.iloc[:, :-1].values
+
     # run clustering experiments
     clusters = range(2, 50)
     if args.generate:
         # run clustering experiment
         clustering_experiment(digits_X, digits_y, 'digits', clusters, rdir=rdir)
         clustering_experiment(abalone_X, abalone_y, 'abalone', clusters, rdir=rdir)
+
+        # run clustering experiment with testing data
+        clustering_experiment_test(digits_X, digits_y, digits_X_test, digits_y_test,
+                                   'digits', clusters, rdir=rdir)
+        clustering_experiment_test(abalone_X, abalone_y, abalone_X_test, abalone_y_test,
+                                   'abalone', clusters, rdir=rdir)
 
         # generate component plots
         generate_component_plots(name='digits', rdir=rdir, pdir=pdir)

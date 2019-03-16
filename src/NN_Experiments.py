@@ -113,15 +113,16 @@ abalone_X_test = abalone_scalar.transform(abalone_X_test)
 
 ## BASELINE
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 
 start_time = timeit.default_timer()
 ann.fit(digits_X, digits_y)
 predict = ann.predict(digits_X_test)
-print(classification_report(predict, digits_y_test))
+x = classification_report(predict, digits_y_test)
+print(x)
 end_time = timeit.default_timer()
 elapsed = end_time - start_time
 print("Done: {} seconds".format(elapsed))
@@ -157,9 +158,9 @@ digits_X_test_gmm = np.concatenate(
 
 ##KMEANS
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_gmm, digits_y)
@@ -174,9 +175,9 @@ print("Done: {} seconds".format(elapsed))
 
 ##GMM
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_km, digits_y)
@@ -200,9 +201,9 @@ digits_X_test_PCA = pca.transform(digits_X_test)
 
 
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_PCA, digits_y)
@@ -243,9 +244,9 @@ digits_X_test_PCA_gmm = np.concatenate(
 
 ## PCA + KMEANS
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_PCA_km, digits_y)
@@ -260,9 +261,9 @@ print("Done: {} seconds".format(elapsed))
 
 ## PCA + GMM
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 
@@ -289,9 +290,9 @@ digits_X_test_ICA = ica.transform(digits_X_test)
 
 
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_ICA, digits_y)
@@ -334,9 +335,9 @@ digits_X_test_ICA_gmm = np.concatenate(
 
 ## ICA + KMEANS
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_ICA_km, digits_y)
@@ -351,9 +352,9 @@ print("Done: {} seconds".format(elapsed))
 
 ## ICA + GMM
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_ICA_gmm, digits_y)
@@ -379,9 +380,9 @@ digits_X_test_RP = rp.transform(digits_X_test)
 
 
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_RP, digits_y)
@@ -424,9 +425,9 @@ digits_X_test_RP_gmm = np.concatenate(
 
 ## RP + KMEANS
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_RP_km, digits_y)
@@ -441,9 +442,9 @@ print("Done: {} seconds".format(elapsed))
 
 ## RP + GMM
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_RP_gmm, digits_y)
@@ -477,9 +478,9 @@ digits_X_test_RF = digits_X_test[:, idxs]
 
 
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_RF, digits_y)
@@ -522,9 +523,9 @@ digits_X_test_RF_gmm = np.concatenate(
 
 ## RP + KMEANS
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_RF_km, digits_y)
@@ -539,9 +540,9 @@ print("Done: {} seconds".format(elapsed))
 
 ## RF + GMM
 ann = MLPClassifier(
-    activation='relu', max_iter=5000,
+    activation='relu', max_iter=20,
     solver='adam', learning_rate='adaptive',
-    hidden_layer_sizes=(500, 500), alpha=0.01
+    hidden_layer_sizes=(20), alpha=0.01
 )
 start_time = timeit.default_timer()
 ann.fit(digits_X_RF_gmm, digits_y)
